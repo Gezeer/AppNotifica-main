@@ -11,7 +11,7 @@ import UIKit
 class LoginView:UIView{
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .white
+        self.backgroundColor = .viewBackGraoundColor
         setupVisualElements()
         
     }
@@ -27,7 +27,7 @@ class LoginView:UIView{
     //cria a função com as propriedade do label do login
     var labelLogin: UILabel = {
         let label = UILabel()
-        label.textColor = UIColor(red: 0.541, green: 0.541, blue: 0.557, alpha: 1)
+        label.textColor = .labelBackGraoundColor
         label.font = UIFont(name: "SFProDisplay-Light", size: 16)
         label.text = "Registre e gerencie as ocorrências do seu IF"
         
@@ -37,7 +37,7 @@ class LoginView:UIView{
     
     var emailTextField: UITextField = {
         let textField = UITextField()
-        textField.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
+        textField.backgroundColor = .textFieldBackGraoundColor
         textField.placeholder = "E-mail"
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
@@ -45,7 +45,7 @@ class LoginView:UIView{
     
     var SenhaTextField: UITextField = {
         let senhaText = UITextField()
-        senhaText.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
+        senhaText.backgroundColor = .textFieldBackGraoundColor
         senhaText.placeholder = "Senha"
         senhaText.translatesAutoresizingMaskIntoConstraints = false
         return senhaText
@@ -53,7 +53,7 @@ class LoginView:UIView{
     
     var button: UIButton = {
         let buttonField = UIButton()
-        buttonField.layer.backgroundColor = UIColor(red: 0.369, green: 0.639, blue: 0.639, alpha: 1).cgColor
+        buttonField.backgroundColor = .buttonBackGraoundColor
         buttonField.setTitle("LOGAR", for: .normal)
         buttonField.layer.cornerRadius = 14
         buttonField.translatesAutoresizingMaskIntoConstraints = false
@@ -61,7 +61,7 @@ class LoginView:UIView{
     }()
     var buttonTwo: UIButton = {
         let buttonTwoField = UIButton()
-        buttonTwoField.layer.backgroundColor = UIColor(red: 0.369, green: 0.639, blue: 0.639, alpha: 1).cgColor
+        buttonTwoField.backgroundColor = .buttonBackGraoundColor
         buttonTwoField.setTitle("REGISTRAR", for: .normal)
         buttonTwoField.layer.cornerRadius = 14
         buttonTwoField.translatesAutoresizingMaskIntoConstraints = false
