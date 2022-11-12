@@ -15,38 +15,21 @@ class LoginView:UIView{
         setupVisualElements()
         
     }
+    
     //cria a função com as propriedade da Imagem do login
     var imageLogin = ImageDefault(image:"ImageLogin")
-    
     
     //cria a função com as propriedade do label do login
     var labelLogin = LabelDefault(text: "Registre e gerencie as ocorrências do seu IF")
     
     //cria a função com as propriedade do text do login
     var emailTextField = TextFieldDefault(text: "E-mail")
-      
-
-    
     var SenhaTextField = TextFieldDefault(text: "Senha")
        
-
-    
-    var button: UIButton = {
-        let buttonField = UIButton()
-        buttonField.backgroundColor = .buttonBackGraoundColor
-        buttonField.setTitle("LOGAR", for: .normal)
-        buttonField.layer.cornerRadius = 14
-        buttonField.translatesAutoresizingMaskIntoConstraints = false
-        return buttonField
-    }()
-    var buttonTwo: UIButton = {
-        let buttonTwoField = UIButton()
-        buttonTwoField.backgroundColor = .buttonBackGraoundColor
-        buttonTwoField.setTitle("REGISTRAR", for: .normal)
-        buttonTwoField.layer.cornerRadius = 14
-        buttonTwoField.translatesAutoresizingMaskIntoConstraints = false
-        return buttonTwoField
-    }()
+    //cria a função com as propriedade do botão do login
+    var button = ButtonDefault(text: "LOGAR")
+    var buttonTwo =  ButtonDefault(text: "REGISTRAR")
+       
     
     func setupVisualElements(){
         
