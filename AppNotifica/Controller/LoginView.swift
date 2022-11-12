@@ -16,40 +16,20 @@ class LoginView:UIView{
         
     }
     //cria a função com as propriedade da Imagem do login
-    var imageLogin: UIImageView = {
-        let imagem = UIImageView()
-        imagem.image = UIImage(named:"ImageLogin")
-        imagem.contentMode = .scaleAspectFit
-        imagem.translatesAutoresizingMaskIntoConstraints = false
-        return imagem
-    }()
+    var imageLogin = ImageDefault(image:"ImageLogin")
+    
     
     //cria a função com as propriedade do label do login
-    var labelLogin: UILabel = {
-        let label = UILabel()
-        label.textColor = .labelBackGraoundColor
-        label.font = UIFont(name: "SFProDisplay-Light", size: 16)
-        label.text = "Registre e gerencie as ocorrências do seu IF"
-        
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    var labelLogin = LabelDefault(text: "Registre e gerencie as ocorrências do seu IF")
     
-    var emailTextField: UITextField = {
-        let textField = UITextField()
-        textField.backgroundColor = .textFieldBackGraoundColor
-        textField.placeholder = "E-mail"
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        return textField
-    }()
+    //cria a função com as propriedade do text do login
+    var emailTextField = TextFieldDefault(text: "E-mail")
+      
+
     
-    var SenhaTextField: UITextField = {
-        let senhaText = UITextField()
-        senhaText.backgroundColor = .textFieldBackGraoundColor
-        senhaText.placeholder = "Senha"
-        senhaText.translatesAutoresizingMaskIntoConstraints = false
-        return senhaText
-    }()
+    var SenhaTextField = TextFieldDefault(text: "Senha")
+       
+
     
     var button: UIButton = {
         let buttonField = UIButton()
