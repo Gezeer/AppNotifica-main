@@ -20,7 +20,7 @@ class LabelDefault : UILabel{
     
     private func initDefault(text:String){
         self.textColor = .labelBackGraoundColor
-        self.font = UIFont(name: "SFProDisplay-Light", size: 16)
+        self.font = UIFont(name: "SFProText-Regular", size: 20)
         self.text = text
         self.translatesAutoresizingMaskIntoConstraints = false
         
