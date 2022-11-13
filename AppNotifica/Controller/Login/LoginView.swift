@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-
+//MARK: - Initialize
 class LoginView:UIView{
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -16,11 +16,18 @@ class LoginView:UIView{
         
     }
     
+    //MARK: - Clousures
+    var onRegisterTap:(()->Void)?
+    
+    
+    
+    
+    //MARK: - Properties
     //cria a função com as propriedade da Imagem do login
     var imageLogin = ImageDefault(image:"ImageLogin")
     
     //cria a função com as propriedade do label do login
-    var labelLogin = LabelDefault(text: "Registre e gerencie as ocorrências do seu IF", font:UIFont.systemFont(ofSize: 27, weight: .regular))
+    var labelLogin = LabelDefault(text: "Registre e gerencie as ocorrências do seu IF", font:UIFont.systemFont(ofSize: 17, weight: .regular))
     
     //cria a função com as propriedade do text do login
     var emailTextField = TextFieldDefault(text: "E-mail")
@@ -39,6 +46,7 @@ class LoginView:UIView{
         self.addSubview(SenhaTextField)
         self.addSubview(button)
         self.addSubview(buttonTwo)
+        buttonTwo.addTarget(self, action: #selector(registerTap), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             imageLogin.widthAnchor.constraint(equalToConstant: 274.99),
@@ -91,5 +99,14 @@ class LoginView:UIView{
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - Actions
+    
+    @objc
+    private func registerTap(){
+        onRegisterTap?()
+    }
+    
+    
 }
 
