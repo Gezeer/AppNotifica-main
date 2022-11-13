@@ -16,7 +16,7 @@ class RegisterView:UIView{
         
     }
     //cria a função com as propriedade do label do login
-    var labelLogin = LabelDefault(text: "Entre com seu e-mail e senha para se registrar.")
+    var labelLogin = LabelDefault(text: "Entre com seu e-mail e senha para se registrar.", font: UIFont.systemFont(ofSize: 20, weight: .regular))
     
     //cria a função com as propriedade do text do login
     var emailTextField = TextFieldDefault(text: "E-mail")
