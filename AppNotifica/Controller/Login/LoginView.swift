@@ -18,7 +18,7 @@ class LoginView:UIView{
     
     //MARK: - Clousures
     var onRegisterTap:(()->Void)?
-    
+    var onLoginTap:(()->Void)?
     
     
     
@@ -47,6 +47,7 @@ class LoginView:UIView{
         self.addSubview(button)
         self.addSubview(buttonTwo)
         buttonTwo.addTarget(self, action: #selector(registerTap), for: .touchUpInside)
+        button.addTarget(self, action: #selector(loginTap), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             imageLogin.widthAnchor.constraint(equalToConstant: 274.99),
@@ -85,12 +86,7 @@ class LoginView:UIView{
             buttonTwo.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
             buttonTwo.topAnchor.constraint(equalTo: button.topAnchor, constant: 60),
             buttonTwo.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
-            
-            
-            
-            
-            
-            
+        
         ])
     }
     
@@ -106,6 +102,12 @@ class LoginView:UIView{
     private func registerTap(){
         onRegisterTap?()
     }
+    
+    @objc
+    private func loginTap(){
+        onLoginTap?()
+    }
+    
     
     
 }

@@ -1,35 +1,40 @@
 //
-//  RegisterCoordinator.swift
+//  HomeCoordinator.swift
 //  AppNotifica
 //
-//  Created by Geiziane alexandre on 12/11/22.
+//  Created by Geiziane alexandre on 16/11/22.
 //
 
 import Foundation
 import UIKit
 
-
-class RegisterCoordinator : Coordinator {
+class HomeCoordinator: Coordinator {
     
-    var navegationController : UINavigationController
+    private let navegationController : UINavigationController
+    
+    lazy var homeViewController : HomeViewController = {
+        let ViewController = HomeViewController()
+        
+        return ViewController
+    }()
+
     init(navegationController: UINavigationController) {
         self.navegationController = navegationController
     }
     
     func start() {
         
-        let viewController = RegisterViewController()
+        let viewController = HomeViewController()
         self.navegationController.pushViewController(viewController, animated: true)
         
-        viewController.onLoginTap = {
-            self.gotoLogin()
         }
         
-    }
+    
     
     //função que chama a registerView
-    func gotoLogin () {
+    func gotoHome () {
         self.navegationController.popViewController(animated: true)
-        
+      
     }
 }
+
