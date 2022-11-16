@@ -15,6 +15,16 @@ class RegisterView:UIView{
         setupVisualElements()
         
     }
+    
+    
+   //MARK: - INITIALIZE
+    
+    var onLoginTap:(() -> Void)?
+    
+    
+    
+    
+    //MARK: - PROPERTIES
     //cria a função com as propriedade do label do login
     var labelLogin = LabelDefault(text: "Entre com seu e-mail e senha para se registrar.", font: UIFont.systemFont(ofSize: 20, weight: .regular))
     
@@ -39,6 +49,9 @@ class RegisterView:UIView{
         self.addSubview(buttonTwo)
         self.addSubview(button)
         
+        
+        button.addTarget(self, action: #selector(loginTap), for: .touchUpInside)
+        
         NSLayoutConstraint.activate([
             
             labelLogin.widthAnchor.constraint(equalToConstant: 100),
@@ -48,7 +61,7 @@ class RegisterView:UIView{
             
             
             emailTextField.widthAnchor.constraint(equalToConstant: 100),
-            emailTextField.topAnchor.constraint(equalTo: labelLogin.topAnchor, constant: 80),
+            emailTextField.topAnchor.constraint(equalTo: labelLogin.topAnchor, constant: 100),
             emailTextField.heightAnchor.constraint(equalToConstant: 44),
             emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
             emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
@@ -68,7 +81,7 @@ class RegisterView:UIView{
             buttonTwo.widthAnchor.constraint(equalToConstant: 358),
             buttonTwo.heightAnchor.constraint(equalToConstant: 50),
             buttonTwo.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
-            buttonTwo.topAnchor.constraint(equalTo: confirmarSenhaTextField.topAnchor, constant: 60),
+            buttonTwo.topAnchor.constraint(equalTo: confirmarSenhaTextField.topAnchor, constant: 80),
             buttonTwo.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             
             button.widthAnchor.constraint(equalToConstant: 358),
@@ -89,6 +102,15 @@ class RegisterView:UIView{
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    
+    //MARK: - Actions
+    
+    @objc
+    private func loginTap(){
+        onLoginTap?()
     }
 }
 

@@ -63,7 +63,7 @@ class LoginView:UIView{
             
             
             emailTextField.widthAnchor.constraint(equalToConstant: 100),
-            emailTextField.topAnchor.constraint(equalTo: labelLogin.topAnchor, constant: 80),
+            emailTextField.topAnchor.constraint(equalTo: labelLogin.topAnchor, constant: 100),
             emailTextField.heightAnchor.constraint(equalToConstant: 44),
             emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
             emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
