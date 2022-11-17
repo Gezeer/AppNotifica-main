@@ -8,14 +8,7 @@
 import Foundation
 import UIKit
 
-class RegisterView:UIView{
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.backgroundColor = .viewBackGraoundColor
-        setupVisualElements()
-        
-    }
-    
+class RegisterView: ViewDefault{
     
    //MARK: - INITIALIZE
     
@@ -26,13 +19,26 @@ class RegisterView:UIView{
     
     
     //MARK: - PROPERTIES
-    //cria a função com as propriedade do label do login
+    //cria a variavel com as propriedade do label do login
     var labelLogin = LabelDefault(text: "Entre com seu e-mail e senha para se registrar.", font: UIFont.systemFont(ofSize: 20, weight: .regular))
     
-    //cria a função com as propriedade do text do login
-    var emailTextField = TextFieldDefault(text: "E-mail")
-    var SenhaTextField = TextFieldDefault(text: "Senha")
-    var confirmarSenhaTextField = TextFieldDefault(text: "Confirmar senha")
+    //cria a variavel com as propriedade do text do login
+    var emailTextField = TextFieldDefault(placeholder:"E-mail", keyBoardType: .emailAddress, returnKeyType: .next)
+    //cria a funçao
+    var SenhaTextField: TextFieldDefault = {
+       let text  = TextFieldDefault(placeholder:"Senha", keyBoardType: .emailAddress, returnKeyType: .next)
+        text.isSecureTextEntry = true
+        return text
+    }()
+    
+    //cria funçao
+    var confirmarSenhaTextField: TextFieldDefault = {
+        let TextConfirmaSenha = TextFieldDefault(placeholder:"Confirmar senha", keyBoardType: .emailAddress, returnKeyType: .done)
+        TextConfirmaSenha.isSecureTextEntry = true
+        
+        return TextConfirmaSenha
+        
+    }()
        
     //cria a função com as propriedade do botão do login
     var buttonTwo = ButtonDefault(text: "REGISTRAR")
@@ -40,9 +46,9 @@ class RegisterView:UIView{
     
        
     
-    func setupVisualElements(){
+        override func setupVisualElements(){
         
-    
+        super.setupVisualElements()
         self.addSubview(labelLogin)
         self.addSubview(emailTextField)
         self.addSubview(SenhaTextField)
@@ -98,15 +104,6 @@ class RegisterView:UIView{
             
         ])
     }
-    
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    
-    
     //MARK: - Actions
     
     @objc

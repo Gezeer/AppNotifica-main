@@ -8,12 +8,16 @@
 import Foundation
 import UIKit
 //MARK: - Initialize
-class LoginView:UIView{
+class LoginView: ViewDefault{
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .viewBackGraoundColor
         setupVisualElements()
         
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     //MARK: - Clousures
@@ -30,16 +34,21 @@ class LoginView:UIView{
     var labelLogin = LabelDefault(text: "Registre e gerencie as ocorrências do seu IF", font:UIFont.systemFont(ofSize: 17, weight: .regular))
     
     //cria a função com as propriedade do text do login
-    var emailTextField = TextFieldDefault(text: "E-mail")
-    var SenhaTextField = TextFieldDefault(text: "Senha")
-       
+    var emailTextField = TextFieldDefault(placeholder:"E-mail", keyBoardType: .emailAddress, returnKeyType: .next)
+    //cria funçao
+    var SenhaTextField: TextFieldDefault = {
+        let textSenhaLogin = TextFieldDefault(placeholder:"Senha", keyBoardType: .emailAddress, returnKeyType: .done)
+        textSenhaLogin.isSecureTextEntry = true
+        
+        return textSenhaLogin
+    }()
     //cria a função com as propriedade do botão do login
     var button = ButtonDefault(text: "LOGAR")
     var buttonTwo =  ButtonDefault(text: "REGISTRAR")
        
     
-    func setupVisualElements(){
-        
+        override func setupVisualElements(){
+        super.setupVisualElements()
         self.addSubview(imageLogin)
         self.addSubview(labelLogin)
         self.addSubview(emailTextField)
@@ -89,13 +98,6 @@ class LoginView:UIView{
         
         ])
     }
-    
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     //MARK: - Actions
     
     @objc
