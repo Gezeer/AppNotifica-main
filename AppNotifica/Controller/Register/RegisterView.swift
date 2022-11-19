@@ -49,6 +49,9 @@ class RegisterView: ViewDefault{
         override func setupVisualElements(){
         
         super.setupVisualElements()
+            emailTextField.delegate = self
+            SenhaTextField.delegate = self
+            confirmarSenhaTextField.delegate = self
         self.addSubview(labelLogin)
         self.addSubview(emailTextField)
         self.addSubview(SenhaTextField)
@@ -111,4 +114,19 @@ class RegisterView: ViewDefault{
         onLoginTap?()
     }
 }
-
+// configura o botao seguinte do teclado
+extension RegisterView: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailTextField{
+            self.SenhaTextField.becomeFirstResponder()
+            
+        }else if textField == SenhaTextField{
+            self.confirmarSenhaTextField.becomeFirstResponder()
+        }else{
+            textField.resignFirstResponder()
+        }
+        
+        return true
+        
+    }
+}

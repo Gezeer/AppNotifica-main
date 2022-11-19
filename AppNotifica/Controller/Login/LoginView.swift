@@ -49,6 +49,8 @@ class LoginView: ViewDefault{
     
         override func setupVisualElements(){
         super.setupVisualElements()
+            emailTextField.delegate = self
+            SenhaTextField.delegate = self
         self.addSubview(imageLogin)
         self.addSubview(labelLogin)
         self.addSubview(emailTextField)
@@ -112,5 +114,17 @@ class LoginView: ViewDefault{
     
     
     
+}
+
+extension LoginView: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailTextField{
+            self.SenhaTextField.becomeFirstResponder()
+            
+        }else{
+            textField.resignFirstResponder()
+        }
+        return true
+    }
 }
 
