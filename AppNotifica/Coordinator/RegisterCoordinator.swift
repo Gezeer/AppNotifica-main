@@ -11,15 +11,15 @@ import UIKit
 
 class RegisterCoordinator : Coordinator {
     
-    var navegationController : UINavigationController
-    init(navegationController: UINavigationController) {
-        self.navegationController = navegationController
+    var navigationController : UINavigationController
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
     }
     
     func start() {
         
         let viewController = RegisterViewController()
-        self.navegationController.pushViewController(viewController, animated: true)
+        self.navigationController.pushViewController(viewController, animated: true)
         
         viewController.onLoginTap = {
             self.gotoLogin()
@@ -29,7 +29,7 @@ class RegisterCoordinator : Coordinator {
     
     //função que chama a registerView
     func gotoLogin () {
-        self.navegationController.popViewController(animated: true)
+        self.navigationController.popViewController(animated: true)
         
     }
 }

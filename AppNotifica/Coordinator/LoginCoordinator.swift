@@ -11,15 +11,15 @@ import UIKit
 
 class LoginCoordinator : Coordinator {
     
-    var navegationController : UINavigationController
-    init(navegationController: UINavigationController) {
-        self.navegationController = navegationController
+    var navigationController : UINavigationController
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
     }
     
     func start() {
         
         let viewController = LoginViewController()
-        self.navegationController.pushViewController(viewController, animated: true)
+        self.navigationController.pushViewController(viewController, animated: true)
         
         viewController.onRegisterTap = {
             self.gotoResgister()
@@ -29,12 +29,12 @@ class LoginCoordinator : Coordinator {
         }
     }
     func gotoResgister(){
-        let coordinator = RegisterCoordinator(navegationController: navegationController)
+        let coordinator = RegisterCoordinator(navigationController: navigationController)
         coordinator.start()
     }
     
     func gotoLogin(){
-        let coordinator = HomeCoordinator(navegationController: navegationController)
+        let coordinator = TabBarCoordinator(navigationController: navigationController)
         coordinator.start()
     }
     

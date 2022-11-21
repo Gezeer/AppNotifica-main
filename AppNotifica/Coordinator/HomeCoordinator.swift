@@ -10,31 +10,24 @@ import UIKit
 
 class HomeCoordinator: Coordinator {
     
-    private let navegationController : UINavigationController
+    private let navigationController : UINavigationController
     
     lazy var homeViewController : HomeViewController = {
         let ViewController = HomeViewController()
+        ViewController.tabBarItem.title = "Home"
+        ViewController.tabBarItem.image = UIImage(systemName: "homekit")
         
         return ViewController
     }()
 
-    init(navegationController: UINavigationController) {
-        self.navegationController = navegationController
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
     }
     
     func start() {
         
-        let viewController = HomeViewController()
-        self.navegationController.pushViewController(viewController, animated: true)
         
-        }
         
-    
-    
-    //função que chama a registerView
-    func gotoHome () {
-        self.navegationController.popViewController(animated: true)
-      
     }
 }
 
