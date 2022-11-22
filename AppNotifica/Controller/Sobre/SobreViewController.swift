@@ -13,8 +13,8 @@ class SobreViewController:ViewControllerDefault{
 
 
 //cria variavel
-lazy var sobreView: Sobreview = {
-    let sobreView = Sobreview()
+lazy var sobreView: SobreView = {
+    let sobreView = SobreView()
     
     return sobreView
 }()
