@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
-class NovaOcorrenciaView:UIView{
-    
+class NovaOcorrenciaView: ViewDefault{
+    override func setupVisualElements(){
+       super.setupVisualElements()
+      }
 }
