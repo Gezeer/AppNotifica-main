@@ -23,6 +23,8 @@
 		650B50F7291E919C002FE0BF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B50F6291E919C002FE0BF /* LoginView.swift */; };
 		650B50F9291E922E002FE0BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B50F8291E922E002FE0BF /* LoginViewController.swift */; };
 		651E59A0291FD4E20015F46E /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651E599F291FD4E20015F46E /* RegisterCoordinator.swift */; };
+		6536FB22293BAD680025305E /* Lista.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536FB21293BAD680025305E /* Lista.swift */; };
+		6536FB24293BB6020025305E /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536FB23293BB6020025305E /* CustomTableViewCell.swift */; };
 		6566C05A291EDD64006EC4E7 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6566C059291EDD64006EC4E7 /* UIColor+.swift */; };
 		6566C05D291EEC6C006EC4E7 /* ImageDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6566C05C291EEC6C006EC4E7 /* ImageDefault.swift */; };
 		6566C05F291EEFBA006EC4E7 /* LabelDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6566C05E291EEFBA006EC4E7 /* LabelDefault.swift */; };
@@ -82,6 +84,8 @@
 		650B50F6291E919C002FE0BF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		650B50F8291E922E002FE0BF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		651E599F291FD4E20015F46E /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
+		6536FB21293BAD680025305E /* Lista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lista.swift; sourceTree = "<group>"; };
+		6536FB23293BB6020025305E /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		6566C059291EDD64006EC4E7 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		6566C05C291EEC6C006EC4E7 /* ImageDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDefault.swift; sourceTree = "<group>"; };
 		6566C05E291EEFBA006EC4E7 /* LabelDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelDefault.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 		41239E8928F840EA00D92C31 /* AppNotifica */ = {
 			isa = PBXGroup;
 			children = (
+				6536FB20293BAD470025305E /* ListaOcorrencia */,
 				6566C05B291EEB7B006EC4E7 /* Infrastructure */,
 				6566C058291EDCC7006EC4E7 /* Extension */,
 				650B50F5291E90C5002FE0BF /* Controller */,
@@ -217,6 +222,15 @@
 				41239E8C28F840EA00D92C31 /* SceneDelegate.swift */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		6536FB20293BAD470025305E /* ListaOcorrencia */ = {
+			isa = PBXGroup;
+			children = (
+				6536FB21293BAD680025305E /* Lista.swift */,
+				6536FB23293BB6020025305E /* CustomTableViewCell.swift */,
+			);
+			path = ListaOcorrencia;
 			sourceTree = "<group>";
 		};
 		6566C058291EDCC7006EC4E7 /* Extension */ = {
@@ -443,10 +457,12 @@
 				650B50F9291E922E002FE0BF /* LoginViewController.swift in Sources */,
 				39EF386129266CA60084A71C /* ViewDefault.swift in Sources */,
 				65AFA08A292B1BCD00D05B0D /* NovaOcorrenciaCoordinator.swift in Sources */,
+				6536FB24293BB6020025305E /* CustomTableViewCell.swift in Sources */,
 				6566C061291EEFD2006EC4E7 /* ButtonDefault.swift in Sources */,
 				650B50F1291E8176002FE0BF /* Coordinator.swift in Sources */,
 				65AFA084292B181A00D05B0D /* SobreViewController.swift in Sources */,
 				41239E9528F840EB00D92C31 /* AppNotifica.xcdatamodeld in Sources */,
+				6536FB22293BAD680025305E /* Lista.swift in Sources */,
 				41239E8D28F840EA00D92C31 /* SceneDelegate.swift in Sources */,
 				651E59A0291FD4E20015F46E /* RegisterCoordinator.swift in Sources */,
 				65D6791A29251B21004FE009 /* HomeView.swift in Sources */,

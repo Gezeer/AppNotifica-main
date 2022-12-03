@@ -8,7 +8,15 @@
 import Foundation
 import UIKit
 
-class HomeViewController: ViewControllerDefault {
+class HomeViewController: ViewControllerDefault, UITableViewDataSource, UITableViewDelegate{
+    
+
+    private let tableView:UITableView = {
+        let tableView = UITableView()
+        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
+        return tableView
+    }()
+    
     
     //MARK: - Clouseres
     
@@ -29,7 +37,25 @@ class HomeViewController: ViewControllerDefault {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Home"
-
+        tableView.dataSource = self
+        view.addSubview(tableView)
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.frame = view.bounds
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 15
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath)
+        
+      
+        return cell
     }
 }
 
