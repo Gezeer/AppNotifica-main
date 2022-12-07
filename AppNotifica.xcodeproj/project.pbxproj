@@ -32,6 +32,7 @@
 		6566C063291EEFE3006EC4E7 /* TextFieldDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6566C062291EEFE3006EC4E7 /* TextFieldDefault.swift */; };
 		6566C067291F37C7006EC4E7 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6566C066291F37C7006EC4E7 /* RegisterView.swift */; };
 		6566C069291F37F4006EC4E7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6566C068291F37F4006EC4E7 /* RegisterViewController.swift */; };
+		656829EC2940303B00388367 /* EscolherImagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656829EB2940303B00388367 /* EscolherImagem.swift */; };
 		65AFA07C292B171F00D05B0D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AFA07B292B171F00D05B0D /* TabBarController.swift */; };
 		65AFA07E292B17A300D05B0D /* SobreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AFA07D292B17A200D05B0D /* SobreView.swift */; };
 		65AFA080292B17B700D05B0D /* NovaOcorrenciaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AFA07F292B17B700D05B0D /* NovaOcorrenciaView.swift */; };
@@ -93,6 +94,7 @@
 		6566C062291EEFE3006EC4E7 /* TextFieldDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDefault.swift; sourceTree = "<group>"; };
 		6566C066291F37C7006EC4E7 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		6566C068291F37F4006EC4E7 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		656829EB2940303B00388367 /* EscolherImagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscolherImagem.swift; sourceTree = "<group>"; };
 		65AFA07B292B171F00D05B0D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		65AFA07D292B17A200D05B0D /* SobreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreView.swift; sourceTree = "<group>"; };
 		65AFA07F292B17B700D05B0D /* NovaOcorrenciaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaOcorrenciaView.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 			children = (
 				65AFA07F292B17B700D05B0D /* NovaOcorrenciaView.swift */,
 				65AFA081292B17FF00D05B0D /* NovaOcorrenciaViewController.swift */,
+				656829EB2940303B00388367 /* EscolherImagem.swift */,
 			);
 			path = NovaOcorrencia;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				39EF386129266CA60084A71C /* ViewDefault.swift in Sources */,
 				65AFA08A292B1BCD00D05B0D /* NovaOcorrenciaCoordinator.swift in Sources */,
 				6536FB24293BB6020025305E /* CustomTableViewCell.swift in Sources */,
+				656829EC2940303B00388367 /* EscolherImagem.swift in Sources */,
 				6566C061291EEFD2006EC4E7 /* ButtonDefault.swift in Sources */,
 				650B50F1291E8176002FE0BF /* Coordinator.swift in Sources */,
 				65AFA084292B181A00D05B0D /* SobreViewController.swift in Sources */,
