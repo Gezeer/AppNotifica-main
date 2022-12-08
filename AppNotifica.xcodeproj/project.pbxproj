@@ -132,6 +132,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39EC60B8294223B3002E4459 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				650B50EF291E813C002FE0BF /* Coordinator */,
+				650B50F5291E90C5002FE0BF /* Controller */,
+				6566C058291EDCC7006EC4E7 /* Extension */,
+				6566C05B291EEB7B006EC4E7 /* Infrastructure */,
+				6536FB20293BAD470025305E /* ListaOcorrencia */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		41239E7E28F840EA00D92C31 = {
 			isa = PBXGroup;
 			children = (
@@ -155,11 +167,7 @@
 		41239E8928F840EA00D92C31 /* AppNotifica */ = {
 			isa = PBXGroup;
 			children = (
-				6536FB20293BAD470025305E /* ListaOcorrencia */,
-				6566C05B291EEB7B006EC4E7 /* Infrastructure */,
-				6566C058291EDCC7006EC4E7 /* Extension */,
-				650B50F5291E90C5002FE0BF /* Controller */,
-				650B50EF291E813C002FE0BF /* Coordinator */,
+				39EC60B8294223B3002E4459 /* Source */,
 				652341CA291C04D500E56090 /* Resource */,
 				41239E9B28F840ED00D92C31 /* Info.plist */,
 			);
